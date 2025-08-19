@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Particle background canvas */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+    }
+    header nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #eee;
+      transition: 0.3s;
+    }
+    header nav a:hover {color: #ff5252;}
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff5252;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {background: #e04848;}
+
+    section {
+      padding: 80px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 5px solid #ff5252;
+      padding-left: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .card h3 {margin-bottom: 10px; color: #ff5252;}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <header>
+    <h2>Portfolio</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1 data-aos="zoom-in">Hello, I'm <span id="typing"></span></h1>
+    <p data-aos="fade-up">A Computer Science Student passionate about AI, Web Development & Projects</p>
+    <a href="#contact" class="btn" data-aos="fade-up">Get in Touch</a>
+  </div>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I am a Computer Science student passionate about creating interactive applications and solving problems with code. 
+    My focus is on AI, Web Development, and building real-world projects.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-left">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Languages</h3><p>Python, C, Java</p></div>
+      <div class="card"><h3>Web Tech</h3><p>HTML, CSS</p></div>
+      <div class="card"><h3>Tools</h3><p>Tableau, MySQL</p></div>
+      <div class="card"><h3>Soft Skills</h3><p>Teamwork, Problem-Solving</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Restaurant Reservation</h3>
+        <p>A web app that helps users find, book, and manage restaurant reservations online .</p>
+        <a href="https://github.com/Sravan1410/RESTAURANT-RESERVATION" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Wine Quality Prediction</h3>
+        <p>Built a Random Forest model to predict wine quality from chemical attributes with ~66% accuracy.</p>
+        <a href="https://github.com/Sravan1410/Wine-Quality-Prediction-" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Smart DAY/NIGHT IoT System Simulation with Smart Lamp, Ceiling Fan, Door & Windows in Packet Trace</h3>
+        <p>Simulated IoT-based home automation in Cisco Packet Tracer with automated lighting, climate, and security controls for energy efficiency and convenience.</p>
+        <a href="https://github.com/Sravan1410/Smart-DAY-NIGHT-IoT-System-Simulation-with-Smart-Lamp-Ceiling-Fan-Door-Windows-in-Packet-Trace" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: sravankumarb1008@email.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/bsk6/" target="_blank">linkedin.com/in/bsk6/</a></p>
+    <p>GitHub: <a href="https://github.com/Sravan1410" target="_blank">github.com/Sravan1410</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 B SRAVAN KUMAR. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const text = ["BODDEPALLI SRAVAN KUMAR", "a Web Developer", "an AI Enthusiast", "a Problem Solver"];
+    let count = 0, index = 0, currentText = "", letter = "";
+    (function type() {
+      if (count === text.length) count = 0;
+      currentText = text[count];
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById('typing').textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1000);
+      } else {
+        setTimeout(type, 150);
+      }
+    })();
+  </script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80},
+        "size": {"value": 3},
+        "move": {"speed": 2},
+        "line_linked": {"enable": true, "distance": 150, "color": "#ffffff"}
+      }
+    });
+  </script>
+
+  <!-- AOS Scroll Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+
+</body>
+</html>
